@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B73E64CF-69E4-4F61-BFE2-F2090D0B9CD4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TLNguyenVanLyN2</RootNamespace>
+    <AssemblyName>TLNguyenVanLyN2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BienToanCuc.cs" />
+    <Compile Include="BLL\GiaoDichBLL.cs" />
+    <Compile Include="BLL\LoaiGDBLL.cs" />
+    <Compile Include="BLL\PersonBLL.cs" />
+    <Compile Include="BLL\ViBLL.cs" />
+    <Compile Include="DAL\GiaoDich.cs" />
+    <Compile Include="DAL\LoaiGD.cs" />
+    <Compile Include="DAL\Person.cs" />
+    <Compile Include="DAL\QLChiTieuModel.cs" />
+    <Compile Include="DAL\sysdiagram.cs" />
+    <Compile Include="DAL\Vi.cs" />
+    <Compile Include="frmChiTietGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietGD.Designer.cs">
+      <DependentUpon>frmChiTietGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiaoDich.Designer.cs">
+      <DependentUpon>frmGiaoDich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVi.Designer.cs">
+      <DependentUpon>frmVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViChiTiet.Designer.cs">
+      <DependentUpon>frmViChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLChiTieuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLChiTieuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLChiTieuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLChiTieuDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\GDViewModel.cs" />
+    <Compile Include="ViewModel\LoaiViewModel.cs" />
+    <Compile Include="ViewModel\ViViewModel.cs" />
+    <EmbeddedResource Include="frmChiTietGD.resx">
+      <DependentUpon>frmChiTietGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiaoDich.resx">
+      <DependentUpon>frmGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVi.resx">
+      <DependentUpon>frmVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViChiTiet.resx">
+      <DependentUpon>frmViChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLChiTieuDataSet.xsc">
+      <DependentUpon>QLChiTieuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLChiTieuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLChiTieuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLChiTieuDataSet.xss">
+      <DependentUpon>QLChiTieuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLChiTieuDataSet1.xsc">
+      <DependentUpon>QLChiTieuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLChiTieuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLChiTieuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLChiTieuDataSet1.xss">
+      <DependentUpon>QLChiTieuDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="image\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
